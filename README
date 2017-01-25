@@ -1,0 +1,8 @@
+le projet contient 5 fichiers:
+- le fichier "encoder.c" : c'est le fichier source de code qui contient les différentes fonctions.
+
+-le fichier "encoder.h" : contient les headers des fonctions
+
+-le fichier "main.c" : le programme principale qui fait appel au fichier "encoder.h" via l #include"encoder.h"
+
+-le "Makefile" : le fichier qui contient les dépendances entre les fichiers, on l'utilise lorsqu'on lance la commande make lors de la compilation
