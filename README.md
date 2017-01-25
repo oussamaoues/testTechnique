@@ -1,2 +1,0 @@
-# testTechnique
-test technique (SOGILIS)
