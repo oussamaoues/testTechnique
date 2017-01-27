@@ -6,13 +6,13 @@ CFLAGS=-c
 all: encoder
 
 encoder: main.o encoder.o
-	$(CC) main.o encoder.o -o encoder -W -Wall -ansi -pedantic
+	$(CC) main.o encoder.o -o encoder -W -pipe -Wall -ansi -pedantic
 
 main.o: main.c
-	$(CC) $(CFLAGS) main.c -W -Wall -ansi -pedantic
+	$(CC) $(CFLAGS) main.c -W -pipe -Wall -ansi -pedantic
 
 encoder.o: encoder.c
-	$(CC) $(CFLAGS) encoder.c -W -Wall -ansi -pedantic
+	$(CC) $(CFLAGS) encoder.c -W -pipe -Wall -ansi -pedantic
 
 clean: 
 	rm -rf *o encoder
