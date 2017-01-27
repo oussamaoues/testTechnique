@@ -2,16 +2,16 @@
 #include <string.h>
 #include "encoder.h"
 
-FILE *fp;       //le fichier contenant les données à stocker dans le disque dur
-char *output_encoder;  //chaine de caractéres contenant la sortie de l'encodeur
+FILE *fp;       /*le fichier contenant les données a stocker dans le disque dur*/
+char *output_encoder;  /*chaine de caracteres contenant la sortie de l'encodeur*/
 
-int main(){
-
+int main(int argc, char *argv[])
+{
 fp = openFile("EncoderINPUT", "r");
-output_encoder=allocMemory(fp); //allouer la mémoire nécessaire pour les données de sortie de l'encodeur
-output_encoder= bitStuffing(fp,output_encoder);   //appliquer le bit stuffing au données de fichier INPUT
+output_encoder=allocMemory(fp); /*allouer la memoire necessaire pour les donnees de sortie de l'encodeur*/
+output_encoder= bitStuffing(fp,output_encoder);   /*appliquer le bit stuffing au donnees de fichier INPUT*/
 printf("la sortie de l'encodeur %s",output_encoder);
-free(output_encoder); //libérer la mémoire allouée
-fclose(fp);  //fermer le fichier
+free(output_encoder); /*liberer la memoire allouee*/
+fclose(fp);  /*fermer le fichier*/
 return 0;
 }
